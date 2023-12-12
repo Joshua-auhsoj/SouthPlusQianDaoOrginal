@@ -23,6 +23,6 @@ jobs:
     
     - name: Run script
       env:
-        NAME: ${{ secrets.self_name }}
-        PASSWORD: ${{ secrets.self_password }}
+        NAME: ${{ secrets.SELF_NAME }}
+        PASSWORD: ${{ secrets.SELF_PASSWORD }}
       run: python sp-p3.py
