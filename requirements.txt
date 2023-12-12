@@ -1,0 +1,2 @@
+beautifulsoup4==4.10.0
+http.cookiejar==1.0.3
