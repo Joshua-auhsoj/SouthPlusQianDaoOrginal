@@ -157,9 +157,8 @@ if __name__ == '__main__':
     print(sleep_time)
     time.sleep(sleep_time)  # 假装周末睡过头没有及时签到
     '''
-    user_login = SouthPlus('[username]', '[password]')  # fill in your credentials hereself_password = os.getenv('self_password')
-    self_name = os.getenv('self_name')
-    user_login = SouthPlus(self_name, self_password)
+    self_name = os.getenv('SELF_NAME')
+    user_login = SouthPlus(SELF_NAME, SELF_PASSWORD)
     bbs_login_data = user_login.login_data()
     Login_Url = host + 'login.php?'
     user_login.login_bbs(Login_Url, bbs_login_data)
