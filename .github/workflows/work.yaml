@@ -21,14 +21,12 @@ jobs:
     - name: Install dependencies
       run: pip install -r requirements.txt
     
-    - name: 每日签到，参数15，使用“ python sp-p3.py 13”运行
+    - name: 申请周常任务
       env:
-        NAME: ${{ secrets.SELF_NAME }}
-        PASSWORD: ${{ secrets.SELF_PASSWORD }}
-      run: python sp-p3.py 15
+        COOKIE: ${{ secrets.COOKIE }}
+      run: APPLYWEEKLY.py
       
-    - name: 每周签到，参数14，使用“ python sp-p3.py 14”运行
+    - name: 收集周常奖励
       env:
-        NAME: ${{ secrets.SELF_NAME }}
-        PASSWORD: ${{ secrets.SELF_PASSWORD }}
-      run: python sp-p3.py 14
+        COOKIE: ${{ secrets.COOKIE }}
+      run: COLLECTWEEKLY.py
