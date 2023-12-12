@@ -8,6 +8,7 @@ https://github.com/yo1995/Daily_Python_Tasks/tree/master/Checkin_dianbook_kindbo
 '''
 
 import sys
+import OS
 import urllib
 import re
 import http.cookiejar
