@@ -10,7 +10,6 @@ https://github.com/yo1995/Daily_Python_Tasks/tree/master/Checkin_dianbook_kindbo
 import sys
 import urllib
 import re
-import os
 import http.cookiejar
 # import random
 # import hashlib
@@ -157,8 +156,9 @@ if __name__ == '__main__':
     print(sleep_time)
     time.sleep(sleep_time)  # 假装周末睡过头没有及时签到
     '''
+    self_password = os.getenv('SELF_PASSWORD')
     self_name = os.getenv('SELF_NAME')
-    user_login = SouthPlus(SELF_NAME, SELF_PASSWORD)
+    user_login = SouthPlus(self_name, self_password)
     bbs_login_data = user_login.login_data()
     Login_Url = host + 'login.php?'
     user_login.login_bbs(Login_Url, bbs_login_data)
