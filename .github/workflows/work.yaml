@@ -21,11 +21,11 @@ jobs:
     - name: Install dependencies
       run: pip install -r requirements.txt
     
-    - name: 每日签到，参数13，使用“ python sp-p3.py 13”运行
+    - name: 每日签到，参数15，使用“ python sp-p3.py 13”运行
       env:
         NAME: ${{ secrets.SELF_NAME }}
         PASSWORD: ${{ secrets.SELF_PASSWORD }}
-      run: python sp-p3.py 13
+      run: python sp-p3.py 15
       
     - name: 每周签到，参数14，使用“ python sp-p3.py 14”运行
       env:
