@@ -24,9 +24,9 @@ jobs:
     - name: 申请周常任务
       env:
         COOKIE: ${{ secrets.COOKIE }}
-      run: APPLYWEEKLY.py
+      run: python APPLYWEEKLY.py
       
     - name: 收集周常奖励
       env:
         COOKIE: ${{ secrets.COOKIE }}
-      run: COLLECTWEEKLY.py
+      run: python COLLECTWEEKLY.py
