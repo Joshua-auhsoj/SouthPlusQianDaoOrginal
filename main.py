@@ -4,6 +4,7 @@ import re
 import asyncio
 
 
+
 process_1 = subprocess.Popen(['python', 'APPLYDAILY.py'], stdout=subprocess.PIPE)
 output_1, _ = process_1.communicate()
 
@@ -39,12 +40,12 @@ print(merged_title)
 print(merged_content)
 
 
-from telegram import Bot
-
 bot_token = os.environ.get('BOTTOKEN')
 chat_id = os.environ.get('USERID')
 
+
 # 创建 Bot 实例
+from telegram import Bot
 bot = Bot(token=bot_token)
 
 # 发送消息
