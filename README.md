@@ -24,6 +24,6 @@
 1.更新了一下代码，现在可以通过Server酱的标题来判断任务成功与否，通过内容查看请求返回值  
 2.现在就等下周周常冷却后抓包周签到了  
 ## 以上内容完成于23/12/13，21:46
-1.用xml解析了返回值，把Server酱下了，换成TG Bot，**BOTTOKEN**填写TG Bot的token，**USERID**填写推送目标的ID
+1.用xml解析了返回值，把Server酱下了，换成TG Bot，**BOTTOKEN**填写TG Bot的token，**USERID**填写推送目标的ID  
 2.调试了一万遍，用Action就是出错，总是提示Token错误，在PyCharm里就能跑起来，后来发现是Action配置忘记加Secret
 ## 以上内容完成于23/12/14，00:19
