@@ -1,8 +1,7 @@
 import os
 import subprocess
 import re
-import telebot
-
+import asyncio
 
 
 process_1 = subprocess.Popen(['python', 'APPLYDAILY.py'], stdout=subprocess.PIPE)
@@ -40,12 +39,17 @@ print(merged_title)
 print(merged_content)
 
 
+from telegram import Bot
+
 bot_token = os.environ.get('BOTTOKEN')
 chat_id = os.environ.get('USERID')
 
+# 创建 Bot 实例
+bot = Bot(token=bot_token)
 
+# 发送消息
+async def send_message():
+    await bot.send_message(chat_id=chat_id, text=merged_title + '\n' + merged_content)
 
-TOKEN = bot_token
-tb = telebot.TeleBot(TOKEN)
-text = (merged_title + '\n' + merged_content)
-tb.send_message(chat_id, text)
+# 运行异步函数
+asyncio.run(send_message())
