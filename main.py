@@ -1,16 +1,8 @@
 import os
-import urllib.parse
-import urllib.request
 import subprocess
 import re
+import asyncio
 
-def sc_send(text, desp='', key=os.getenv('SCKEY')):
-    postdata = urllib.parse.urlencode({'text': text, 'desp': desp}).encode('utf-8')
-    url = f'https://sctapi.ftqq.com/{key}.send'
-    req = urllib.request.Request(url, data=postdata, method='POST')
-    with urllib.request.urlopen(req) as response:
-        result = response.read().decode('utf-8')
-    return result
 
 process_1 = subprocess.Popen(['python', 'APPLYDAILY.py'], stdout=subprocess.PIPE)
 output_1, _ = process_1.communicate()
@@ -27,9 +19,9 @@ output_4, _ = process_4.communicate()
 response_text1 = output_2.decode()
 
 if re.search(r"成功", response_text1):
-    title1 = "南+日常成功，"
+    title1 = "南+ 日常成功，"
 else:
-    title1 = "南+日常失败，"
+    title1 = "南+ 日常失败，"
 
 response_text2 = output_4.decode()
 
@@ -46,5 +38,18 @@ merged_title = title1 + title2
 print(merged_title)
 print(merged_content)
 
-ret = sc_send(merged_title, merged_content)
-print(ret)
+
+from telegram import Bot
+
+bot_token = os.environ.get('BOTTOKEN')
+chat_id = os.environ.get('USERID')
+
+# 创建 Bot 实例
+bot = Bot(token=bot_token)
+
+# 发送消息
+async def send_message():
+    await bot.send_message(chat_id=chat_id, text=merged_title + '\n' + merged_content)
+
+# 运行异步函数
+asyncio.run(send_message())

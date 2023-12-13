@@ -1,6 +1,6 @@
 import requests
 import os
-import re
+import xml.etree.ElementTree as ET
 cookie_value = os.getenv('COOKIE')
 
 cookies = {cookie.split('=')[0]: cookie.split('=')[1] for cookie in cookie_value.split('; ')}
@@ -31,4 +31,20 @@ params = {
 
 response = requests.get('https://www.north-plus.net/plugin.php', params=params, cookies=cookies, headers=headers)
 
-print(response.text)
+
+data = response.text
+
+# 解析XML数据
+root = ET.fromstring(data)
+cdata = root.text
+
+# 提取变量值
+values = cdata.split('\t')
+if len(values) == 2:
+    action = values[0]
+    message = values[1]
+
+
+    print('日常-'+message)
+else:
+    print("Invalid XML format")
