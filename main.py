@@ -1,7 +1,7 @@
 import os
 import subprocess
 import re
-import asyncio
+import telebot
 
 
 
@@ -44,13 +44,8 @@ bot_token = os.environ.get('BOTTOKEN')
 chat_id = os.environ.get('USERID')
 
 
-# 创建 Bot 实例
-from telegram import Bot
-bot = Bot(token=bot_token)
 
-# 发送消息
-async def send_message():
-    await bot.send_message(chat_id=chat_id, text=merged_title + '\n' + merged_content)
-
-# 运行异步函数
-asyncio.run(send_message())
+TOKEN = bot_token
+tb = telebot.TeleBot(TOKEN)
+text = (merged_title + '\n' + merged_content)
+tb.send_message(chat_id, text)
