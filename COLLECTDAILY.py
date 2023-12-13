@@ -6,6 +6,7 @@ cookie_value = os.getenv('COOKIE')
 
 cookies = {cookie.split('=')[0]: cookie.split('=')[1] for cookie in cookie_value.split('; ')}
 
+
 headers = {
     'authority': 'www.north-plus.net',
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
@@ -33,14 +34,4 @@ params = {
 
 response = requests.get('https://www.north-plus.net/plugin.php', params=params, cookies=cookies, headers=headers)
 
-output = response.text
-
-pattern = re.compile('[\u4e00-\u9fa5]+')  # 匹配中文字符的正则表达式模式
-
-matches = pattern.findall(output)  # 找到所有匹配的中文字符
-
-if len(matches) > 0:
-    extracted_text = matches[0]
-    print(extracted_text)
-else:
-    print("出错")
+print(response.text)
