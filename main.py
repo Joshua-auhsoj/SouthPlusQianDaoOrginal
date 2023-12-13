@@ -51,6 +51,3 @@ bot = Bot(token=bot_token)
 # 发送消息
 async def send_message():
     await bot.send_message(chat_id=chat_id, text=merged_title + '\n' + merged_content)
-
-# 运行异步函数
-asyncio.run(send_message())
