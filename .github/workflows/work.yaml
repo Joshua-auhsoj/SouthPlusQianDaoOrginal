@@ -30,3 +30,12 @@ jobs:
       env:
         COOKIE: ${{ secrets.COOKIE }}
       run: python COLLECTWEEKLY.py
+    - name: 申请日常任务
+      env:
+        COOKIE: ${{ secrets.COOKIE }}
+      run: python APPLYDAILY.py
+      
+    - name: 收集日常奖励
+      env:
+        COOKIE: ${{ secrets.COOKIE }}
+      run: python COLLECTDAILY.py
