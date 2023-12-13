@@ -24,7 +24,8 @@ jobs:
     - name: 总脚本
       env:
         COOKIE: ${{ secrets.COOKIE }}
-        SCKEY: ${{ secrets.SCKEY }}
+        BOTTOKEN: ${{ secrets.BOTTOKEN }}
+        USERID: ${{ secrets.USERID }}
       run: python main.py
    
    
