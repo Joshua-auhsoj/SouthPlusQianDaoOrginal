@@ -43,4 +43,4 @@ sp_coin_span = soup.find('span', class_='s3 f10')
 sp_coin_value = sp_coin_span.text
 
 # 输出SP币值
-print("SP币值:", sp_coin_value)
+print("SP币:", sp_coin_value)
