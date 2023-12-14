@@ -2,6 +2,7 @@ import os
 import subprocess
 import re
 import asyncio
+from telegram import Bot
 
 
 process_1 = subprocess.Popen(['python', 'APPLYDAILY.py'], stdout=subprocess.PIPE)
@@ -16,7 +17,11 @@ output_3, _ = process_3.communicate()
 process_4 = subprocess.Popen(['python', 'COLLECTWEEKLY.py'], stdout=subprocess.PIPE)
 output_4, _ = process_4.communicate()
 
+process_5 = subprocess.Popen(['python', 'GETSP.py'], stdout=subprocess.PIPE)
+output_5, _ = process_5.communicate()
+
 response_text1 = output_2.decode()
+title3 = output_5.decode()
 
 if re.search(r"完成", response_text1):
     title1 = "南+ 日常成功，"
@@ -33,7 +38,7 @@ else:
 
 # 合并输出为一个变量
 merged_content = output_1.decode() + output_2.decode() + output_3.decode() + output_4.decode()
-merged_title = title1 + title2
+merged_title = title1 + title2 + title3
 
 print(merged_title)
 print(merged_content)
