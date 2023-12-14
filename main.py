@@ -18,7 +18,7 @@ output_4, _ = process_4.communicate()
 
 response_text1 = output_2.decode()
 
-if re.search(r"成功", response_text1):
+if re.search(r"完成", response_text1):
     title1 = "南+ 日常成功，"
 else:
     title1 = "南+ 日常失败，"
