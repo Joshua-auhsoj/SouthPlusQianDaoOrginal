@@ -27,3 +27,5 @@
 1.用xml解析了返回值，把Server酱下了，换成TG Bot，**BOTTOKEN**填写TG Bot的token，**USERID**填写推送目标的ID  
 2.调试了一万遍，用Action就是出错，总是提示Token错误，在PyCharm里就能跑起来，后来发现是Action配置忘记加Secret
 ## 以上内容完成于23/12/14，00:19
+1.添加了获取总SP币值的功能  
+## 以上内容完成于23/12/14，15:06
