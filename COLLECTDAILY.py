@@ -44,4 +44,4 @@ if len(values) == 3:
 
     print('日常-' + message)
 else:
-    print("XML格式不正确，请检查代码")
+    print("XML格式不正确，请检查COOKIE设置")
