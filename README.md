@@ -34,6 +34,11 @@
 ## 以上内容完成于23/12/17，18:38
 1.周常冷却好了，补全了周常相关的代码和结果判断
 ## 以上内容完成于23/12/19，14:24  
-1.看了一下issue里关于cookie的问题，将[这个链接](javascript:(function() { var cookies = document.cookie; window.alert("Cookie: " + cookies); })();)
-
-## 使用方法
+1.看了一下issue里关于cookie的问题，将以下代码填入书签的url中，在目标页面点击书签就可以直接显示cookie了  
+```javascript
+javascript:(function() {
+  var cookies = document.cookie;
+  window.alert("Cookie: " + cookies);
+})();
+```  
+## 以上内容完成于24/01/16，19:17 
