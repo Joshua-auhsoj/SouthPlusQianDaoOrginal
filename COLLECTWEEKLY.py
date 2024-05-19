@@ -10,9 +10,9 @@ headers = {
     'authority': 'www.south-plus.net',
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'accept-language': 'zh-CN,zh-TW;q=0.9,zh;q=0.8,en;q=0.7',
-    'dnt': '1',
-    'referer': 'https://www.south-plus.net/plugin.php?H_name-tasks-actions-newtasks.html.html',
-    'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"',
+    'priority': 'u=0, i',
+    'referer': 'https://www.south-plus.net/plugin.php?H_name-tasks.html',
+    'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
     'sec-ch-ua-mobile': '?0',
     'sec-ch-ua-platform': '"Windows"',
     'sec-fetch-dest': 'iframe',
@@ -20,7 +20,7 @@ headers = {
     'sec-fetch-site': 'same-origin',
     'sec-fetch-user': '?1',
     'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
 }
 
 params = {
@@ -29,7 +29,7 @@ params = {
     'actions': 'job2',
     'cid': '14',
     'nowtime': '1702966690072',
-    'verify': '9d5c5785',
+    'verify': '6dda1f22',
 }
 
 response = requests.get('https://www.south-plus.net/plugin.php', params=params, cookies=cookies, headers=headers)

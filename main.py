@@ -29,7 +29,7 @@ else:
 
 response_text2 = output_4.decode()
 
-if re.search(r"成功", response_text1):
+if re.search(r"完成", response_text1):
     title2 = "周常成功，"
 else:
     title2 = "周常失败，"
