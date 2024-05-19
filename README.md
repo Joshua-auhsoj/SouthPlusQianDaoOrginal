@@ -2,10 +2,15 @@
 ## 源代码来自只会用BurpSuite的我和神通广大的ChatGPT
 ### 感谢[能把Curl转换成各种语言的神奇网站](https://curlconverter.com/),感谢万能的[ChatGPT](https://poe.com/ChatGPT),感谢优秀的渗透工具[BurpSuite](https://portswigger.net/burp)，感谢大毛病不多，小毛病不断的浏览器[Chromium](https://www.chromium.org/chromium-projects/)及[Google Chrome](https://www.google.com/chrome/)
 ## 使用方法
-1.支持Server酱推送，将**SCKEY**添加到**Action Secrets**  
+1.支持TelegramBot推送，将**USERID**和**BOTTOKEN**和添加到**Action Secrets**，两者分别为用户的ChatID（可以找Userinfobot索要），BotToken（可以找BotFather索要）  
 2.将**COOKIE**添加到**Action Secrets**  
 3.添加了定时任务，会在每天北京时间凌晨一点运行  
 4.低调使用，避免迭代  
+5.COOKIE值示例  
+```plaintext
+_ga=值; _gid=值; eb9e6_cknum=值D; eb9e6_ck_info=值; eb9e6_winduser=值D; eb9e6_readlog=值; eb9e6_ol_offset=值; eb9e6_lastpos=值; _gat=1; _ga_3G0BZEH5V0=值; eb9e6_lastvisit=值
+```
+两端无引号，值间用分号隔开，从Chrome抓请求获取，或者将请求复制后摘取  
 ## 开发过程
 1.安装PyCharm，安装BurpSuite  
 2.使用BurpSuite抓包，登录到领取任务页面，打开拦截，F12开启录制请求，点击“领取任务”  
@@ -34,11 +39,15 @@
 ## 以上内容完成于23/12/17，18:38
 1.周常冷却好了，补全了周常相关的代码和结果判断
 ## 以上内容完成于23/12/19，14:24  
+~~~
 1.看了一下issue里关于cookie的问题，将以下代码填入书签的url中，在目标页面点击书签就可以直接显示cookie了  
 ```javascript
 javascript:(function() {
   var cookies = document.cookie;
   window.alert("Cookie: " + cookies);
 })();
-```  
-## 以上内容完成于24/01/16，19:17 
+```
+~~~
+## 以上内容完成于24/01/16，19:17  
+1.换了个账号，配置好Cookie之后无法使用，重新更新了一下请求代码，Fork里面有更优秀的代码，建议使用  
+## 以上内容完成于24/05/19，20:23
