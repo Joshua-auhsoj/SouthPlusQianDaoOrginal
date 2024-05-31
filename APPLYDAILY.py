@@ -8,6 +8,7 @@ cookies = {cookie.split('=')[0]: cookie.split('=')[1] for cookie in cookie_value
 
 
 headers = {
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'accept-language': 'zh-CN,zh-TW;q=0.9,zh;q=0.8,en;q=0.7',
     'dnt': '1',
     'priority': 'u=0, i',
@@ -28,7 +29,6 @@ headers = {
     'upgrade-insecure-requests': '1',
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
 }
-
 
 params = {
     'H_name': 'tasks',
