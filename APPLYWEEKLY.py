@@ -12,7 +12,7 @@ headers = {
     'accept-language': 'zh-CN,zh-TW;q=0.9,zh;q=0.8,en;q=0.7',
     'dnt': '1',
     'priority': 'u=0, i',
-    'referer': 'https://www.south-plus.net/plugin.php?H_name-tasks.html',
+    'referer': 'https://www.south-plus.net/plugin.php?H_name-tasks-actions-newtasks.html.html',
     'sec-ch-ua': '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
     'sec-ch-ua-arch': '"x86"',
     'sec-ch-ua-bitness': '"64"',
@@ -35,7 +35,7 @@ params = {
     'action': 'ajax',
     'actions': 'job',
     'cid': '14',
-    'nowtime': '1717166831730',
+    'nowtime': '1717167492479',
     'verify': '5af36471',
 }
 
