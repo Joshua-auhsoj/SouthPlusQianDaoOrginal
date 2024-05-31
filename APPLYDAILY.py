@@ -41,7 +41,7 @@ params = {
 
 response = requests.get('https://www.south-plus.net/plugin.php', params=params, cookies=cookies, headers=headers)
 data = response.text
-
+print(response.text)
 # 解析XML数据
 root = ET.fromstring(data)
 cdata = root.text
